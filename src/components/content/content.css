@@ -1,0 +1,94 @@
+main .top, main .bottom {
+    padding: 100px 0px;
+}
+
+main .title {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+}
+
+.items .item .img {
+    width: 130px;
+    height: 130px;
+    background-color: aqua;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.items .item span {
+    font-size: 1.2rem;
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/public/bg.jpg');
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+    height: 350px;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+.bg h2 {
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+
+.bg a {
+    display: block;
+    margin-top: 70px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: chocolate;
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .bg {
+        height: 400px;
+    }
+    
+    .bg h2 {
+        font-weight: lighter;
+        font-size: 2rem;
+    }
+    
+    .bg a {
+        margin-top: 50px;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+
+.event-list .event {
+    position: relative;
+    border: 1px solid #aaa;
+    padding: 5px;
+}
+
+.event-list .event .cat {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    background-color: chocolate;
+    padding: 0px 10px;
+}
+
+.event-list .event img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.event-list .event span {
+    display: block;
+    margin: 5px 0px;
+}

@@ -1,0 +1,114 @@
+header {
+    position: relative;
+    background-image: url('/banner2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 600px;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+header h1{
+    font-size: 4rem;
+    font-weight: lighter;
+    text-align: center;
+    margin: 150px 2% 50px;
+    z-index: 99;
+}
+
+header ul li.conn {
+    background-color: chocolate;
+    margin-left: 10px;
+}
+
+header ul li .nav-link {
+    color: #fff;
+}
+
+header ul li .nav-link:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    header .menu-btn-left {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: chocolate;
+        padding: 5px 10px;
+        color: #fff;
+        z-index: 99;
+        transition: all 500ms;
+    }
+
+    header .menu-btn-right {
+        position: absolute;
+        top: 15px;
+        left: 31%;
+        background-color: chocolate;
+        padding: 5px 10px;
+        color: #fff;
+        z-index: 99;
+        transition: all 500ms;
+    }
+    
+    header .show {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0%;
+        left: 0%;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff;
+        background-color: transparent;
+        transition: all 300ms;
+        z-index: 999;
+    }
+    
+    header .hide {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        left: 100%;
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 0 5px #ccc;
+        background-color: transparent;
+        transition: all 300ms;
+        z-index: 999;
+    }
+    
+    header .show .nav, header .hide .nav {
+        flex-direction: column;
+        background-color: #fff;
+        padding-top: 50px;
+        box-shadow: 0 0 5px #ccc;
+        width: 70%;
+        height: 100%;
+    }
+    
+    header .nav-link {
+        color: #222 !important;
+        font-size: 1.2rem;
+        margin: 5px 0px;
+    }
+    
+    header .conn .nav-link {
+        color: #fff !important;
+        margin-right: 30px;
+    }
+}

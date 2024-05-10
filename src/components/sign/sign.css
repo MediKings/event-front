@@ -1,0 +1,73 @@
+.sign-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+.sign-box {
+    display: flex;
+    width: 700px;
+    height: 550px;
+    box-shadow: 0 0 20px 1px #ccc;
+}
+
+.sign-bg {
+    width: 50%;
+    background-image: url('/public/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px 20px;
+}
+
+.sign-form form input {
+    display: block;
+    outline: none;
+    padding: 5px;
+    width: 250px;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+
+.sign-form form button {
+    display: block;
+    outline: none;
+    border: none;
+    padding: 7px 5px;
+    width: 250px;
+    margin-bottom: 20px;
+    background-color: chocolate;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .sign-box {
+        width: 90%;
+        height: 550px;
+    }
+
+    .sign-bg {
+        display: none;
+    }
+    
+    .sign-form {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .sign-form form label, .sign-form form input {
+        width: 100%;
+    }
+    
+    .sign-form form button {
+        width: 100%;
+    }
+}
