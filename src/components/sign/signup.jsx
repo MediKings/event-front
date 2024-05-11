@@ -23,7 +23,7 @@ function Signup() {
         } else {
             try {
                 const resp = await axios.post(
-                    "https://event-back.vercel.app/api/signup", 
+                    "https://event-back-ow5h.onrender.com/api/signup", 
                     {
                         firstname: firstname.current.value, 
                         lastname: lastname.current.value, 

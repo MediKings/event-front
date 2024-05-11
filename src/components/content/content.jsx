@@ -10,7 +10,7 @@ function Content({user}) {
 
     useEffect(() => {
         const fetchEvents = async () => {
-          const resp = await axios.get("https://event-back.vercel.app/api/eventsHome")
+          const resp = await axios.get("https://event-back-ow5h.onrender.com/api/eventsHome")
           setEvents(resp.data)
         }
         fetchEvents();
@@ -57,7 +57,7 @@ function Content({user}) {
                     <div className="col-md-6 col-lg-4 p-2" key={event.id}>
                         <div className="event">
                             <small className="cat">{event.category?.name}</small>
-                            <Link to={`/event/${event.id}`}><img src={`https://event-back.vercel.app/images/${event.image}`} alt="" /></Link>
+                            <Link to={`/event/${event.id}`}><img src={`https://event-back-ow5h.onrender.com/images/${event.image}`} alt="" /></Link>
                             <Link to={`/event/${event.id}`} style={{textDecoration: "none", color: "chocolate"}}><h5>{event.title}</h5></Link>
                             <span className='text-muted'>{event.desc.length > 100 ? event.desc.substring(0, 100)+"..." : event.desc}</span>
                             <span>Lieu: {event.place}</span>
