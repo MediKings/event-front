@@ -9,7 +9,7 @@ function CategoryList() {
 
     useEffect(() => {
         const fetchCats = async () => {
-          const resp = await axios.get("http://localhost:5000/api/categories");
+          const resp = await axios.get("https://event-back.vercel.app/api/categories");
           setData(resp.data)
         }
         fetchCats();

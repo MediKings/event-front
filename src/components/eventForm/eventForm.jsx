@@ -8,7 +8,7 @@ function EventForm({user}) {
     const [cats, setCats] = useState([])
     useEffect(() => {
         const fetchCats = async () => {
-          const resp = await axios.get("http://localhost:5000/api/categories");
+          const resp = await axios.get("https://event-back.vercel.app/api/categories");
           setCats(resp.data)
         }
         fetchCats();
@@ -17,7 +17,7 @@ function EventForm({user}) {
     const [emails, setEmails] = useState([])
     useEffect(() => {
         const fetchEmails = async () => {
-            const resp = await axios.get(`http://localhost:5000/api/getEmails`)
+            const resp = await axios.get(`https://event-back.vercel.app/api/getEmails`)
             setEmails(resp.data)
         }
         fetchEmails();
@@ -75,13 +75,13 @@ function EventForm({user}) {
                 data.append("file", image)
                 newEvent.image = filename;
                 console.log(newEvent)
-                await axios.post("http://localhost:5000/api/upload", data)
+                await axios.post("https://event-back.vercel.app/api/upload", data)
                 .then((res)=>console.log(res))
                 .catch((err)=>console.log(err))
             }
 
             try {
-                const resp = await axios.post("http://localhost:5000/api/event", newEvent)
+                const resp = await axios.post("https://event-back.vercel.app/api/event", newEvent)
                 console.log(resp);
                 navigate("/events")
             } catch (error) {

@@ -32,7 +32,7 @@ function EventContent({user}) {
 
     useEffect(() => {
         const fetchEvent = async () => {
-          const resp = await axios.get(`http://localhost:5000/api/event/${param.id}`)
+          const resp = await axios.get(`https://event-back.vercel.app/api/event/${param.id}`)
           setEvent(resp.data)
         }
         fetchEvent();
@@ -51,7 +51,7 @@ function EventContent({user}) {
         } else {
             try {
                 const resp = await axios.post(
-                    "http://localhost:5000/api/followEvent", 
+                    "https://event-back.vercel.app/api/followEvent", 
                     {
                         authorId: userId,
                         eventId: eventId,
@@ -70,7 +70,7 @@ function EventContent({user}) {
             <h3 className='title'>Détails de l'évenement</h3>
             <div className="row m-0 event-list">
                 <div className="col-md-5 col-lg-4 p-2">
-                    <img src={`http://localhost:5000/images/${event.image}`} alt="" className='w-100' />
+                    <img src={`https://event-back.vercel.app/images/${event.image}`} alt="" className='w-100' />
                 </div>
                 <div className="col-md-7 col-lg-8 p-2 mb-5">
                     <div className="d-flex align-items-center mb-3">

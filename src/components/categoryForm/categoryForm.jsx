@@ -14,7 +14,7 @@ function CategoryForm() {
         e.preventDefault();
         if(!category) setMessage('Veillez remplir le champ')
         try {
-            const resp = await axios.post("http://localhost:5000/api/category", {name:category})
+            const resp = await axios.post("https://event-back.vercel.app/api/category", {name:category})
             navigate("/categories")
         } catch (error) {
             setMessage(error.response.data)

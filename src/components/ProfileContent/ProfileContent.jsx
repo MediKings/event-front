@@ -19,7 +19,7 @@ export const ProfileContent = ({user}) => {
   const [myEvents, setMyEvents] = useState([])
   useEffect(() => {
     const fetchMyEvents = async () => {
-      const resp = await axios.get(`http://localhost:5000/api/myEvents/${user.id}`)
+      const resp = await axios.get(`https://event-back.vercel.app/api/myEvents/${user.id}`)
       setMyEvents(resp.data)
     }
     fetchMyEvents();
@@ -28,7 +28,7 @@ export const ProfileContent = ({user}) => {
   const [myFollowedEvents, setMyFollowedEvents] = useState([])
   useEffect(() => {
     const fetchMyFollowedEvents = async () => {
-      const resp = await axios.get(`http://localhost:5000/api/getFollowedEvent/${user.id}`)
+      const resp = await axios.get(`https://event-back.vercel.app/api/getFollowedEvent/${user.id}`)
       setMyFollowedEvents(resp.data)
     }
     fetchMyFollowedEvents();
@@ -68,7 +68,7 @@ export const ProfileContent = ({user}) => {
                     return (
                         <div className="col-md-6 col-lg-4 p-2" key={event.id}>
                             <div className="event">
-                                <Link to={`/event/${event.id}`}><img src={`http://localhost:5000/images/${event.image}`} alt="" /></Link>
+                                <Link to={`/event/${event.id}`}><img src={`https://event-back.vercel.app/images/${event.image}`} alt="" /></Link>
                                 <Link to={`/event/${event.id}`} style={{textDecoration: "none", color: "chocolate"}}><h5>{event.title}</h5></Link>
                                 <span className='text-muted'>{event.desc.length > 100 ? event.desc.substring(0, 100)+"..." : event.desc}</span>
                                 <span>Lieu: {event.place}</span>
@@ -90,7 +90,7 @@ export const ProfileContent = ({user}) => {
                     return (
                         <div className="col-md-6 col-lg-4 p-2" key={e.id}>
                             <div className="event">
-                                <Link to={`/event/${e.event.id}`}><img src={`http://localhost:5000/images/${e.event.image}`} alt="" /></Link>
+                                <Link to={`/event/${e.event.id}`}><img src={`https://event-back.vercel.app/images/${e.event.image}`} alt="" /></Link>
                                 <Link to={`/event/${e.event.id}`} style={{textDecoration: "none", color: "chocolate"}}><h5>{e.event.title}</h5></Link>
                                 <span className='text-muted'>{e.event.desc.length > 100 ? e.event.desc.substring(0, 100)+"..." : e.event.desc}</span>
                                 <span>Lieu: {e.event.place}</span>
